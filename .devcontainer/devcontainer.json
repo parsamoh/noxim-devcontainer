@@ -1,0 +1,37 @@
+{
+    "name": "noxim",
+    "context": "..",
+    "dockerFile": "Dockerfile",
+    "build": {
+        "args": {"--tag" : "nox"}
+    },
+    "runArgs": [
+        "--name",
+        "noximdev"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "mutantdino.resourcemonitor",
+                "GitHub.copilot",
+                "slightc.pip-manager",
+                "SBSnippets.pytorch-snippets",
+                "njpwerner.autodocstring",
+                "ms-azuretools.vscode-docker",
+                "ms-toolsai.datawrangler",
+                "mechatroner.rainbow-csv",
+                "ninoseki.vscode-pylens"
+            ],
+            "settings": {
+                "extensions.verifySignature": false,
+                "python.defaultInterpreterPath": "/usr/bin/python3",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "terminal.integrated.shell.linux": "/bin/bash"
+            }
+        }
+    }
+}
